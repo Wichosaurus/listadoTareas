@@ -1,0 +1,101 @@
+.contenedor{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#5dabe7, #c1c4e2);   /*linear-gradient te da un cambio entre dos colores*/
+    padding: 10px; /*relleno a nivel general*/
+}
+.listado{
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    margin: 100px auto 20px; /*Estamos diciendo que el margen de los lados debe ser automatico, por lo cual se centrara al max widht que tengamos*/
+    padding: 40px 40px 100px;
+    border-radius: 5px;
+}
+.listado h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: chocolate;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /*El espacio que tendra entre el siguiente elemento vertical*/
+}
+.entradaTarea {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(227, 238, 252);
+    border-radius: 25px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+input {
+    flex: 1; /*Para que tenga el full widht*/
+    border: none; /*quita los bordes del cuadro de texto*/
+    outline: none; /*quita la linea del cuadro de texto*/
+    background: transparent; /*para que el cuadro de texto tome el color del background de su contenedor*/
+    padding: 15px;
+    font-weight: 20px;
+    text-align: center; /*para centrar el texto a su contenedor*/
+    font-size: 14px;
+}
+button {
+    border: none;
+    outline: none;
+    background: #5dabe7;
+    padding: 15px 30px;
+    color: white;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+}
+ul li {
+    list-style: none; /*remueve los bullet points de un listado*/
+    font-size: 14px;
+    padding: 10px 8px 10px 30px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before { 
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-image: url(images/uncheck.png);
+    background-size: cover;
+    background-position: center;
+    top: 4px;
+    left: 2px;
+}
+ul li.completado {
+    color: darkgray;
+    text-decoration: line-through;
+}
+ul li.completado::before{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url(images/check1.png);
+    top: 9px;
+    left: 4px;
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bolder;
+    color: darkgray;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 40px;
+}
+ul li span:hover{
+    background: red;
+    color: white;
+    font-weight: bolder;
+}
